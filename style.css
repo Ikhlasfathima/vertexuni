@@ -12,12 +12,13 @@ body {
     padding: 30px 20px;
   }
   .logo {
-    width: 250px;
+    float: left;
+    width: 150px;
   }
   .logo-small {
-    width: 250px;
-    display: block;
-    margin: 10px auto;
+    width: 100px;
+    float: left;
+    padding: 70px 40px;
   }
   nav {
     background: #0b2af3a4;
