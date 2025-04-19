@@ -5,43 +5,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Courses - Vertex University</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Add some basic styles */
+    .course-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .course-card:hover {
+      transform: scale(1.05);
+    }
+    .course-details {
+      display: none; /* Hide details initially */
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+    .course-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .course-title {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="courses.html">Courses</a>
-    <a href="contact.html">Contact Us</a>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
   </nav>
+  
+
   <header>
     <h1>Our Courses</h1>
   </header>
+
   <main class="courses-grid">
-    <div class="course-card">
-      <img src="campus7.jpg" alt="BCA">
-      <h3>Bachelor of Computer Applications (BCA)</h3>
+    <!-- Course 1 -->
+    <div class="course-card" onclick="toggleDetails('bca')">
+      <h3 class="course-title">Bachelor of Computer Applications (BCA)</h3>
+      <div class="course-details" id="bca">
+        <img src="campus7.jpg" alt="BCA">
+        <p>This undergraduate program focuses on computer science, programming languages, and software development. Students learn to build applications, manage databases, and understand IT systems.</p>
+        <ul>
+          <li>Duration: 3 Years</li>
+          <li>Eligibility: High School Graduate (10+2)</li>
+          <li>Career Opportunities: Software Developer, System Analyst, IT Consultant</li>
+        </ul>
+      </div>
     </div>
-    <div class="course-card">
-      <img src="campus8.jpg" alt="MCA">
-      <h3>Master of Computer Applications (MCA)</h3>
+
+    <!-- Course 2 -->
+    <div class="course-card" onclick="toggleDetails('mca')">
+      <h3 class="course-title">Master of Computer Applications (MCA)</h3>
+      <div class="course-details" id="mca">
+        <img src="campus8.jpg" alt="MCA">
+        <p>The MCA program offers in-depth knowledge of computer science and programming. The course covers areas like artificial intelligence, machine learning, cloud computing, and database management.</p>
+        <ul>
+          <li>Duration: 2 Years</li>
+          <li>Eligibility: Bachelor's Degree in Computer Science or related field</li>
+          <li>Career Opportunities: Software Engineer, Database Administrator, Systems Architect</li>
+        </ul>
+      </div>
     </div>
-    <div class="course-card">
-      <img src="campus9.jpg" alt="BSc CS">
-      <h3>B.Sc. in Computer Science</h3>
+
+    <!-- Course 3 -->
+    <div class="course-card" onclick="toggleDetails('bsc-cs')">
+      <h3 class="course-title">B.Sc. in Computer Science</h3>
+      <div class="course-details" id="bsc-cs">
+        <img src="campus9.jpg" alt="BSc CS">
+        <p>This undergraduate program provides knowledge of basic and advanced concepts in computer science. It focuses on programming, data structures, algorithms, and software engineering.</p>
+        <ul>
+          <li>Duration: 3 Years</li>
+          <li>Eligibility: High School Graduate (10+2)</li>
+          <li>Career Opportunities: Software Developer, Network Engineer, IT Support Specialist</li>
+        </ul>
+      </div>
     </div>
-    <div class="course-card">
-      <img src="campus10.jpg" alt="BTech CSE">
-      <h3>B.Tech in Computer Science & Engineering</h3>
+
+    <!-- Course 4 -->
+    <div class="course-card" onclick="toggleDetails('btech-cse')">
+      <h3 class="course-title">B.Tech in Computer Science & Engineering</h3>
+      <div class="course-details" id="btech-cse">
+        <img src="campus10.jpg" alt="BTech CSE">
+        <p>B.Tech in CSE offers advanced study in computing, programming, software engineering, and hardware design. It is ideal for students seeking careers in software development or IT infrastructure.</p>
+        <ul>
+          <li>Duration: 4 Years</li>
+          <li>Eligibility: High School Graduate (10+2) with Physics, Chemistry, and Math</li>
+          <li>Career Opportunities: Software Engineer, Network Architect, Systems Engineer</li>
+        </ul>
+      </div>
     </div>
-    <div class="course-card">
-      <img src="campus11.jpg" alt="Data Science">
-      <h3>Diploma in Data Science & AI</h3>
+
+    <!-- Course 5 -->
+    <div class="course-card" onclick="toggleDetails('data-science')">
+      <h3 class="course-title">Diploma in Data Science & AI</h3>
+      <div class="course-details" id="data-science">
+        <img src="campus11.jpg" alt="Data Science">
+        <p>This diploma program focuses on data analysis, artificial intelligence, machine learning, and big data technologies. It prepares students for roles in data science and analytics.</p>
+        <ul>
+          <li>Duration: 1 Year</li>
+          <li>Eligibility: Bachelor's Degree or Equivalent</li>
+          <li>Career Opportunities: Data Scientist, Machine Learning Engineer, Data Analyst</li>
+        </ul>
+      </div>
     </div>
-    <div class="course-card">
-      <img src="campus12.jpg" alt="Cybersecurity">
-      <h3>Certificate in Cybersecurity</h3>
+
+    <!-- Course 6 -->
+    <div class="course-card" onclick="toggleDetails('cybersecurity')">
+      <h3 class="course-title">Certificate in Cybersecurity</h3>
+      <div class="course-details" id="cybersecurity">
+        <img src="campus12.jpg" alt="Cybersecurity">
+        <p>This certificate program covers essential cybersecurity concepts, ethical hacking, network security, and risk management. It is designed for those looking to specialize in cybersecurity.</p>
+        <ul>
+          <li>Duration: 6 Months</li>
+          <li>Eligibility: Bachelor's Degree or Equivalent</li>
+          <li>Career Opportunities: Cybersecurity Analyst, Ethical Hacker, Security Consultant</li>
+        </ul>
+      </div>
     </div>
   </main>
+  <footer>
+    <p>&copy; 2025 Vertex University of Computing | <a href="contact.html">Contact Us</a></p>
+  </footer>
+
+  <script>
+    // JavaScript function to toggle visibility of course details
+    function toggleDetails(courseId) {
+      var details = document.getElementById(courseId);
+      if (details.style.display === "block") {
+        details.style.display = "none";
+      } else {
+        details.style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>

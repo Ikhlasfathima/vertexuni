@@ -1,38 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Vertex University</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Vertex University of Computing</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="courses.html">Courses</a>
-        <a href="contact.html">Contact Us</a>
-      </nav>
-    <header>
-        <h1>Gallery</h1>
-    </header>
-    <main class="gallery-grid">
-        <img src="campus1.jpg" alt="">
-        <img src="campus2.jpg" alt="">
-        <img src="campus3.jpg" alt="">
-        <img src="campus4.jpg" alt="">
-        <img src="campus5.jpg" alt="">
-        <img src="campus6.jpg" alt="">
-        <img src="campus14.jpg" alt="">
-        <img src="campus15.jpg" alt="">
-        <img src="campus16.jpg" alt="">
-        <img src="campus17.jpg" alt="">
-        <img src="campus18.jpg" alt="">
-        <img src="campus19.jpg" alt="">
-        <img src="campus20.jpg" alt="">
-        <img src="campus21.jpg" alt="">
-        <img src="campus22.jpg" alt="">
-    </main>
+<body class="gallery-page">
+  <!-- Navigation Bar -->
+  <header class="header-flex">
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="courses.html">Courses</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Gallery Section -->
+  <main class="gallery">
+    <h2 class="section-title">Gallery</h2>
+
+    <div class="image-grid">
+      <div class="gallery-item" onclick="openLightbox('img1')">
+        <img src="campus1.jpg" alt="Classroom" id="img1">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img2')">
+        <img src="campus2.jpg" alt="Lab" id="img2">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img3')">
+        <img src="campus3.jpg" alt="Event" id="img3">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img4')">
+        <img src="campus4.jpg" alt="Library" id="img4">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img5')">
+        <img src="campus5.jpg" alt="Competition" id="img5">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img6')">
+        <img src="campus6.jpg" alt="Graduation" id="img6">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img14')">
+        <img src="campus14.jpg" alt="Graduation" id="img14">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img15')">
+        <img src="campus15.jpg" alt="Graduation" id="img15">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img16')">
+        <img src="campus16.jpg" alt="Graduation" id="img16">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img17')">
+        <img src="campus17.jpg" alt="Graduation" id="img17">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img18')">
+        <img src="campus18.jpg" alt="Graduation" id="img18">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img19')">
+        <img src="campus19.jpg" alt="Graduation" id="img19">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img20')">
+        <img src="campus20.jpg" alt="Graduation" id="img20">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img21')">
+        <img src="campus21.jpg" alt="Graduation" id="img21">
+      </div>
+      <div class="gallery-item" onclick="openLightbox('img22')">
+        <img src="campus22.jpg" alt="Graduation" id="img22">
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox Modal for Image Viewing -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Lightbox Image">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Vertex University of Computing. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
